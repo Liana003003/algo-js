@@ -1,14 +1,15 @@
+//The rand10() function will give me a random number from 1 to 11 which is the total number of learners
 function rand10() {
-  return Math.floor((Math.random() * 10) + 1);
+    return Math.floor((Math.random() * 11) + 1);
+  }
+let learners_array = [];
+function pickLearner(inputAr, n) { 
+  for (let i = 0; i < n; i++){ 
+learners_array.push(inputAr[i]);
 }
-function pickLearner(inputAr, n) {
-if (n > 0 && n < inputAr.length) {
-return inputAr[n]; 
-} else { console.log("You are wrong");
+  if (n > 0 && n < inputAr.length) { return inputAr[n]};
 }
-let listNames = ["Antoine.C", "Ars_d", "Hugo P", "Kamal", "Liana", "M.Jordan", "Manu-cj", "Martin S", "Stephan M.", "Valentin Herman"];
-let lucky = rand10();
-let answer = pickLearner(listNames, lucky);
-Console.log(answer);
-
-//I need to review this code later
+  let listNames = ["Antoine", "Arsenia", "Hugo", "Kamal", "Liana", "Jordan", "Manu", "Martin", "Stephan", "Valentin ", "Inna"];
+  let lucky = rand10();
+pickLearner(listNames, lucky);
+console.log(learners_array);
